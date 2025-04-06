@@ -1,10 +1,15 @@
-<!DOCTYPE html>
+Put your HTML text here<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slothly Sage</title>
     <style>
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
         body {
             font-family: 'Verdana', sans-serif;
             background-color: #f0f9f4;
@@ -17,12 +22,22 @@
             padding: 2rem;
             text-align: center;
             color: white;
+            min-height: 10vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 5px solid #417b5a;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
         }
         header h1 {
             margin: 0;
             font-size: 2.5rem;
         }
         .content {
+            flex: 1;
+            padding-bottom: 2rem;
             padding: 2rem;
             max-width: 800px;
             margin: auto;
@@ -44,6 +59,11 @@
             padding: 1rem;
             background-color: #a8cbb7;
             color: white;
+            min-height: 5vh;
+            border-top: 5px solid #417b5a;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
         }
         a {
             color: #417b5a;
