@@ -42,6 +42,13 @@
             max-width: 800px;
             margin: auto;
         }
+        canvas#game-of-life-canvas {
+            margin: auto;
+            display: block;
+            background: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
         details {
             margin-bottom: 1.5rem;
             background: #ffffff;
@@ -76,6 +83,7 @@
 </head>
 <body>
     <header>
+        <script type="module" src="./game.js"></script>
         <h1>🦥 Slothly Sage</h1>
         <p>Here to cultivate the magic in humanity reflected through technology.</p>
     </header>
@@ -94,6 +102,16 @@
                 <li><a href="https://github.com/slothlysage/kinematics_lib" target="_blank">Kinematics Lib</a> – A lil kinematics library for personal robotics projects.</li>
                 
             </ul>
+        </details>
+
+        <details id="gol-container">
+            <summary>🧬 Game of Life</summary>
+            <div style="text-align: center; margin: 1rem 0;">
+                <button id="toggle">▶️ Start</button>
+                <button id="reset">🔄 Reset</button>
+                <span id="fps">FPS: 0</span>
+            </div>
+            <canvas id="game-of-life-canvas"></canvas>
         </details>
 
         <details>
