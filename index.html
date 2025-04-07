@@ -43,7 +43,7 @@
             margin: auto;
         }
         canvas#game-of-life-canvas {
-            margin: auto;
+            margin: 0 auto;
             display: block;
             background: #fff;
             border-radius: 0.5rem;
@@ -109,7 +109,9 @@
             <div style="text-align: center; margin: 1rem 0;">
                 <button id="toggle">▶️ Start</button>
                 <button id="reset">🔄 Reset</button>
-                <span id="fps">FPS: 0</span>
+                <span id="max-fps-display">max FPS: 60</span>
+                <input type="range" id="fps-slider" min="0" max="60" step="5" value="60">
+                <span id="fps-display">FPS: 60</span>
             </div>
             <canvas id="game-of-life-canvas"></canvas>
         </details>

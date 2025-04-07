@@ -119,10 +119,11 @@ export class Universe {
         wasm.universe_tick(this.__wbg_ptr);
     }
     /**
+     * @param {number} length
      * @returns {Universe}
      */
-    static new() {
-        const ret = wasm.universe_new();
+    static new(length) {
+        const ret = wasm.universe_new(length);
         return Universe.__wrap(ret);
     }
     /**
@@ -160,6 +161,13 @@ export class Universe {
     cells() {
         const ret = wasm.universe_cells(this.__wbg_ptr);
         return ret >>> 0;
+    }
+    /**
+     * @param {number} row
+     * @param {number} column
+     */
+    toggle_cell(row, column) {
+        wasm.universe_toggle_cell(this.__wbg_ptr, row, column);
     }
     randomize() {
         wasm.universe_randomize(this.__wbg_ptr);

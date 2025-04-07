@@ -8,11 +8,12 @@ export class Universe {
   private constructor();
   free(): void;
   tick(): void;
-  static new(): Universe;
+  static new(length: number): Universe;
   render(): string;
   width(): number;
   height(): number;
   cells(): number;
+  toggle_cell(row: number, column: number): void;
   randomize(): void;
 }
 
@@ -22,11 +23,12 @@ export interface InitOutput {
   readonly memory: WebAssembly.Memory;
   readonly __wbg_universe_free: (a: number, b: number) => void;
   readonly universe_tick: (a: number) => void;
-  readonly universe_new: () => number;
+  readonly universe_new: (a: number) => number;
   readonly universe_render: (a: number) => [number, number];
   readonly universe_width: (a: number) => number;
   readonly universe_height: (a: number) => number;
   readonly universe_cells: (a: number) => number;
+  readonly universe_toggle_cell: (a: number, b: number, c: number) => void;
   readonly universe_randomize: (a: number) => void;
   readonly __wbindgen_free: (a: number, b: number, c: number) => void;
   readonly __wbindgen_malloc: (a: number, b: number) => number;
